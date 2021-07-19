@@ -1,24 +1,19 @@
-import logo from "./logo.svg";
-import "./Dashboard.css";
+import TopBar from "./components/topBar";
+import Page from "./components/page";
+import TabBar from "./components/tabBar";
 
 function Dashboard() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/Dashboard.js</code> and save to reload.
-        </p>
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="Dashboard">
+      <header className="Dashboard-header">
+        <TopBar />
       </header>
+      <body className="Dashboard-body">
+        <Page />
+      </body>
+      <footer className="Dashboard-footer">
+        <TabBar />
+      </footer>
     </div>
   );
 }
