@@ -1,7 +1,9 @@
+import AccountPanel from "./accountPanel";
+
 const Page = () => {
   return (
     <>
-      <h1>Base Page</h1>
+      <AccountPanel />
     </>
   );
 };

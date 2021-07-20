@@ -1,6 +1,7 @@
 import TopBar from "./components/topBar";
 import Page from "./components/page";
 import TabBar from "./components/tabBar";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Dashboard() {
   return (
