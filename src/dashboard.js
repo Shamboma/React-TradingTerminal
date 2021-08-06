@@ -7,7 +7,7 @@ function Dashboard() {
   return (
     <div className="Dashboard">
       <header className="Dashboard-header">
-        <TopBar />
+        <TopBar userName="User" />
       </header>
       <body className="Dashboard-body">
         <Page />
