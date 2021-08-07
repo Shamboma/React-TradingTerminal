@@ -1,7 +1,7 @@
 import { useState } from "react";
 import api from "../api/alpaca/config";
 
-const PanelBasicAccount = () => {
+const BasicAccount = () => {
   const [accountInfo, setAccountInfo] = useState([]);
 
   const getAccount = () => {
@@ -29,4 +29,4 @@ const PanelBasicAccount = () => {
   );
 };
 
-export default PanelBasicAccount;
+export default BasicAccount;

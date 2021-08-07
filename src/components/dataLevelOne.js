@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 
-const PanelDataLevelOne = () => {
+const DataLevelOne = () => {
   const [ticker, setTicker] = useState("TEST TICKER");
   const [price, setPrice] = useState(0.1);
   const [high, setHigh] = useState(0.1);
@@ -62,4 +62,4 @@ const PanelDataLevelOne = () => {
   );
 };
 
-export default PanelDataLevelOne;
+export default DataLevelOne;
