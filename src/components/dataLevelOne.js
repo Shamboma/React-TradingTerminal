@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Table } from "react-bootstrap";
+import { Col, Container, Row, Table } from "react-bootstrap";
 
 const DataLevelOne = () => {
   const [ticker, setTicker] = useState("TEST TICKER");
@@ -17,47 +17,57 @@ const DataLevelOne = () => {
     [111, 222, 333, 444, 555],
   ]);
 
-  //Get incoming price, time, size and update values, add to array to display in table with limit of 5 in array
+  //Get incoming price, time, size and update values, add to array to display in table with limit of 3 in array
   useEffect(() => {});
 
   return (
     <>
-      <section>
-        <h3>{ticker}</h3>
-        <h4>{price}</h4>
-        <h4>High {high}</h4>
-        <h4>Low {low}</h4>
-        <h4>Open {open}</h4>
-        <h4>Prev. Close {prevClose}</h4>
-        <h4>Volume {volume}</h4>
-        <h4>Avg. Volume {avgVolume}</h4>
-        <Table>
-          <thead>
-            <tr>
-              <th>Time</th>
-              <th>Price</th>
-              <th>Size</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>{dataOne[0][0]}</th>
-              <th>{dataOne[1][0]}</th>
-              <th>{dataOne[2][0]}</th>
-            </tr>
-            <tr>
-              <th>{dataOne[0][1]}</th>
-              <th>{dataOne[1][1]}</th>
-              <th>{dataOne[2][1]}</th>
-            </tr>
-            <tr>
-              <th>{dataOne[0][2]}</th>
-              <th>{dataOne[1][2]}</th>
-              <th>{dataOne[2][2]}</th>
-            </tr>
-          </tbody>
-        </Table>
-      </section>
+      <Container>
+        <Row>
+          <Col>{ticker}</Col>
+          <Col>{price}</Col>
+        </Row>
+        <Row>
+          <Col>High {high}</Col>
+          <Col>Low {low}</Col>
+        </Row>
+        <Row>
+          <Col>Open {open}</Col>
+          <Col>Prev. Close {prevClose}</Col>
+        </Row>
+        <Row>
+          <Col>Volume {volume}</Col>
+          <Col>Avg. Volume {avgVolume}</Col>
+        </Row>
+        <Row>
+          <Table bordered hover>
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Price</th>
+                <th>Size</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>{dataOne[0][0]}</th>
+                <th>{dataOne[1][0]}</th>
+                <th>{dataOne[2][0]}</th>
+              </tr>
+              <tr>
+                <th>{dataOne[0][1]}</th>
+                <th>{dataOne[1][1]}</th>
+                <th>{dataOne[2][1]}</th>
+              </tr>
+              <tr>
+                <th>{dataOne[0][2]}</th>
+                <th>{dataOne[1][2]}</th>
+                <th>{dataOne[2][2]}</th>
+              </tr>
+            </tbody>
+          </Table>
+        </Row>
+      </Container>
     </>
   );
 };

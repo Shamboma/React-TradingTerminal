@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import api from "../api/alpaca/config";
 
 const BasicTrade = () => {
@@ -50,66 +50,93 @@ const BasicTrade = () => {
 
   return (
     <>
-      <Form>
-        <Form.Group className={"mb-3"}>
-          <Form.Label>Ticker</Form.Label>
-          <Form.Control
-            type="text"
-            value={state.symbol}
-            onChange={changeHandler}
-            id={"symbol"}
-          />
-        </Form.Group>
-        <Form.Group className={"mb-3"}>
-          <Form.Label>Quantity</Form.Label>
-          <Form.Control
-            type="text"
-            value={state.qty}
-            onChange={changeHandler}
-            id={"qty"}
-          />
-        </Form.Group>
-        <Form.Group className={"mb-3"}>
-          <Form.Label>Price</Form.Label>
-          <Form.Control
-            type="text"
-            value={state.price}
-            className={"price"}
-            onChange={changeHandler}
-            id={"price"}
-          />
-        </Form.Group>
-        <Form.Group className={"mb-3"}>
-          <Form.Label>Type</Form.Label>
-          <Form.Control
-            as={"select"}
-            value={state.type}
-            onChange={changeHandler}
-            id={"type"}
-          >
-            <option>limit</option>
-            <option>market</option>
-          </Form.Control>
-        </Form.Group>
-        <Form.Group className={"mb-3"}>
-          <Form.Label>Duration</Form.Label>
-          <Form.Control
-            as={"select"}
-            value={state.time_in_force}
-            onChange={changeHandler}
-            id={"time_in_force"}
-          >
-            <option>day</option>
-            <option>gtc</option>
-          </Form.Control>
-        </Form.Group>
-        <Button variant={"light"} type={"submit"} onClick={buyHandler}>
-          Buy
-        </Button>
-        <Button variant={"light"} type={"submit"} onClick={sellHandler}>
-          Sell
-        </Button>
-      </Form>
+      <Container>
+        <Form>
+          <Form.Group className={"mb-3"} as={Row}>
+            <Form.Label column sm="2">
+              Ticker
+            </Form.Label>
+            <Col>
+              <Form.Control
+                type="text"
+                value={state.symbol}
+                onChange={changeHandler}
+                id={"symbol"}
+                size="sm"
+              />
+            </Col>
+          </Form.Group>
+          <Form.Group className={"mb-3"} as={Row}>
+            <Form.Label column sm="2">
+              Quantity
+            </Form.Label>
+            <Col>
+              <Form.Control
+                type="text"
+                value={state.qty}
+                onChange={changeHandler}
+                id={"qty"}
+                size="sm"
+              />
+            </Col>
+          </Form.Group>
+          <Form.Group className={"mb-3"} as={Row}>
+            <Form.Label column sm="2">
+              Price
+            </Form.Label>
+            <Col>
+              <Form.Control
+                type="text"
+                value={state.price}
+                className={"price"}
+                onChange={changeHandler}
+                id={"price"}
+                size="sm"
+              />
+            </Col>
+          </Form.Group>
+          <Form.Group className={"mb-3"} as={Row}>
+            <Form.Label column sm="2">
+              Type
+            </Form.Label>
+            <Col>
+              <Form.Control
+                as={"select"}
+                value={state.type}
+                onChange={changeHandler}
+                id={"type"}
+                size="sm"
+              >
+                <option>limit</option>
+                <option>market</option>
+              </Form.Control>
+            </Col>
+          </Form.Group>
+          <Form.Group className={"mb-3"} as={Row}>
+            <Form.Label column sm="2">
+              Duration
+            </Form.Label>
+            <Col>
+              <Form.Control
+                as={"select"}
+                value={state.time_in_force}
+                onChange={changeHandler}
+                id={"time_in_force"}
+                size="sm"
+              >
+                <option>day</option>
+                <option>gtc</option>
+              </Form.Control>
+            </Col>
+          </Form.Group>
+          <Button variant={"light"} type={"submit"} onClick={buyHandler}>
+            Buy
+          </Button>
+          <Button variant={"light"} type={"submit"} onClick={sellHandler}>
+            Sell
+          </Button>
+        </Form>
+      </Container>
     </>
   );
 };

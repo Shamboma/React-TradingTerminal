@@ -1,7 +1,7 @@
-import api from "./config";
-const getAccount = () => {
+import api from "../config";
+const getWatchlists = () => {
   api
-    .get("/v2/account")
+    .get("/v2/watchlists")
     .then((res) => {
       console.log(res);
     })
@@ -10,4 +10,4 @@ const getAccount = () => {
     });
 };
 
-export default getAccount;
+export default getWatchlists;

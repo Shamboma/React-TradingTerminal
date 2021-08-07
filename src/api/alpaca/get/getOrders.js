@@ -1,7 +1,7 @@
-import api from "./config";
-const getPositions = () => {
+import api from "../config";
+const getOrders = () => {
   api
-    .get("/v2/positions")
+    .get("/v2/orders")
     .then((res) => {
       console.log(res);
     })
@@ -10,4 +10,4 @@ const getPositions = () => {
     });
 };
 
-export default getPositions;
+export default getOrders;

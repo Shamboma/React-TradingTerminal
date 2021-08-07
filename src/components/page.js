@@ -3,12 +3,20 @@ import BasicTrade from "./basicTrade";
 import { Col, Container, Row } from "react-bootstrap";
 import DataLevelOne from "./dataLevelOne";
 import FullWatchlist from "./fullWatchlist";
-import PanelreadChart from "./readOnlyChart";
+import ReadOnlyChart from "./readOnlyChart";
 
 const Page = () => {
   return (
     <>
       <Container>
+        <Row>
+          <Col>
+            <DataLevelOne />
+          </Col>
+          <Col>
+            <ReadOnlyChart />
+          </Col>
+        </Row>
         <Row>
           <Col>
             <BasicAccount />
@@ -18,19 +26,7 @@ const Page = () => {
           </Col>
         </Row>
         <Row>
-          <Col>
-            <DataLevelOne />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <FullWatchlist />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <PanelreadChart />
-          </Col>
+          <FullWatchlist />
         </Row>
       </Container>
     </>

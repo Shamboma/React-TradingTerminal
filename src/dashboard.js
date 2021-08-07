@@ -1,19 +1,19 @@
-import TopBar from "./components/topBar";
+import Header from "./components/header";
 import Page from "./components/page";
-import TabBar from "./components/tabBar";
+import Footer from "./components/footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Dashboard() {
   return (
     <div className="Dashboard">
       <header className="Dashboard-header">
-        <TopBar userName="User" />
+        <Header userName="User" />
       </header>
       <body className="Dashboard-body">
         <Page />
       </body>
       <footer className="Dashboard-footer">
-        <TabBar />
+        <Footer />
       </footer>
     </div>
   );
