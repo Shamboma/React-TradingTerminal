@@ -1,7 +1,6 @@
-import Header from "./components/header";
-import Page from "./components/page";
-import Footer from "./components/footer";
+import Stocks from "./components/pages/stocks";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/header";
 
 function Dashboard() {
   return (
@@ -10,11 +9,8 @@ function Dashboard() {
         <Header userName="User" />
       </header>
       <body className="Dashboard-body">
-        <Page />
+        <Stocks />
       </body>
-      <footer className="Dashboard-footer">
-        <Footer />
-      </footer>
     </div>
   );
 }

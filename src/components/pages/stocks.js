@@ -1,14 +1,14 @@
-import BasicAccount from "./basicAccount";
-import BasicTrade from "./basicTrade";
+import BasicAccount from "../basicAccount";
+import BasicTrade from "../basicTrade";
 import { Col, Container, Row } from "react-bootstrap";
-import DataLevelOne from "./dataLevelOne";
-import FullWatchlist from "./fullWatchlist";
-import ReadOnlyChart from "./readOnlyChart";
+import DataLevelOne from "../dataLevelOne";
+import FullWatchlist from "../fullWatchlist";
+import ReadOnlyChart from "../readOnlyChart";
 
-const Page = () => {
+const Stocks = () => {
   return (
     <>
-      <Container>
+      <Container fluid>
         <Row>
           <Col>
             <DataLevelOne />
@@ -33,4 +33,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Stocks;
