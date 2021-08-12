@@ -7,16 +7,14 @@ import Landing from "./components/pages/landing";
 function App() {
   return (
     <Router>
-      <div className={"Content"}>
-        <Switch>
-          <Route exact path={"/"}>
-            <Landing />
-          </Route>
-          <Route path={"/dashboard"}>
-            <Dashboard userName={"Guest"} />
-          </Route>
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path={"/"}>
+          <Landing />
+        </Route>
+        <Route path={"/dashboard"}>
+          <Dashboard userName={"Guest"} />
+        </Route>
+      </Switch>
     </Router>
   );
 }

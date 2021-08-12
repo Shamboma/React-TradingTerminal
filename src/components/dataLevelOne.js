@@ -50,44 +50,44 @@ const DataLevelOne = () => {
             </thead>
             <tbody>
               <tr>
-                <th>{dataOne[0][0]}</th>
-                <th>{dataOne[1][0]}</th>
-                <th>{dataOne[2][0]}</th>
+                <td>{dataOne[0][0]}</td>
+                <td>{dataOne[1][0]}</td>
+                <td>{dataOne[2][0]}</td>
               </tr>
               <tr>
-                <th>{dataOne[0][1]}</th>
-                <th>{dataOne[1][1]}</th>
-                <th>{dataOne[2][1]}</th>
+                <td>{dataOne[0][1]}</td>
+                <td>{dataOne[1][1]}</td>
+                <td>{dataOne[2][1]}</td>
               </tr>
               <tr>
-                <th>{dataOne[0][2]}</th>
-                <th>{dataOne[1][2]}</th>
-                <th>{dataOne[2][2]}</th>
+                <td>{dataOne[0][2]}</td>
+                <td>{dataOne[1][2]}</td>
+                <td>{dataOne[2][2]}</td>
               </tr>
               <tr>
-                <th>{dataOne[0][2]}</th>
-                <th>{dataOne[1][2]}</th>
-                <th>{dataOne[2][2]}</th>
+                <td>{dataOne[0][2]}</td>
+                <td>{dataOne[1][2]}</td>
+                <td>{dataOne[2][2]}</td>
               </tr>
               <tr>
-                <th>{dataOne[0][2]}</th>
-                <th>{dataOne[1][2]}</th>
-                <th>{dataOne[2][2]}</th>
+                <td>{dataOne[0][2]}</td>
+                <td>{dataOne[1][2]}</td>
+                <td>{dataOne[2][2]}</td>
               </tr>
               <tr>
-                <th>{dataOne[0][2]}</th>
-                <th>{dataOne[1][2]}</th>
-                <th>{dataOne[2][2]}</th>
+                <td>{dataOne[0][2]}</td>
+                <td>{dataOne[1][2]}</td>
+                <td>{dataOne[2][2]}</td>
               </tr>
               <tr>
-                <th>{dataOne[0][2]}</th>
-                <th>{dataOne[1][2]}</th>
-                <th>{dataOne[2][2]}</th>
+                <td>{dataOne[0][2]}</td>
+                <td>{dataOne[1][2]}</td>
+                <td>{dataOne[2][2]}</td>
               </tr>
               <tr>
-                <th>{dataOne[0][2]}</th>
-                <th>{dataOne[1][2]}</th>
-                <th>{dataOne[2][2]}</th>
+                <td>{dataOne[0][2]}</td>
+                <td>{dataOne[1][2]}</td>
+                <td>{dataOne[2][2]}</td>
               </tr>
             </tbody>
           </Table>

@@ -3,14 +3,16 @@ import Stocks from "../tabs/stocks";
 import NavBar from "../navbar";
 const Dashboard = () => {
   return (
-    <div className={"Dashboard"}>
-      <header>
-        <NavBar userName={"Guest"} />
-      </header>
-      <body>
-        <Stocks />
-      </body>
-    </div>
+    <body>
+      <div className={"Dashboard"}>
+        <header>
+          <NavBar userName={"Guest"} />
+        </header>
+        <body>
+          <Stocks />
+        </body>
+      </div>
+    </body>
   );
 };
 

@@ -1,10 +1,19 @@
 import LoginButton from "../modals/loginButton";
+import { Col, Container, Row } from "react-bootstrap";
 
 const Landing = () => {
   return (
     <>
-      <h1>Trading terminal</h1>
-      <LoginButton text={"Login"} />
+      <body>
+        <Container className={"Landing"}>
+          <Row>
+            <Col>Enter Terminal</Col>
+            <Col>
+              <LoginButton text={"Login"} />
+            </Col>
+          </Row>
+        </Container>
+      </body>
     </>
   );
 };

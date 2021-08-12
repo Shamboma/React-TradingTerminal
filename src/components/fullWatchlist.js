@@ -19,28 +19,28 @@ const FullWatchlist = () => {
           </thead>
           <tbody>
             <tr>
-              <th>{watchlist[0][0]}</th>
-              <th>{watchlist[1][0]}</th>
+              <td>{watchlist[0][0]}</td>
+              <td>{watchlist[1][0]}</td>
             </tr>
             <tr>
-              <th>{watchlist[0][1]}</th>
-              <th>{watchlist[1][1]}</th>
+              <td>{watchlist[0][1]}</td>
+              <td>{watchlist[1][1]}</td>
             </tr>
             <tr>
-              <th>{watchlist[0][2]}</th>
-              <th>{watchlist[1][2]}</th>
+              <td>{watchlist[0][2]}</td>
+              <td>{watchlist[1][2]}</td>
             </tr>
             <tr>
-              <th>{watchlist[0][2]}</th>
-              <th>{watchlist[1][2]}</th>
+              <td>{watchlist[0][2]}</td>
+              <td>{watchlist[1][2]}</td>
             </tr>
             <tr>
-              <th>{watchlist[0][2]}</th>
-              <th>{watchlist[1][2]}</th>
+              <td>{watchlist[0][2]}</td>
+              <td>{watchlist[1][2]}</td>
             </tr>
             <tr>
-              <th>{watchlist[0][2]}</th>
-              <th>{watchlist[1][2]}</th>
+              <td>{watchlist[0][2]}</td>
+              <td>{watchlist[1][2]}</td>
             </tr>
           </tbody>
         </Table>

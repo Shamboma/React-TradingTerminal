@@ -27,13 +27,12 @@ const BasicTrade = () => {
     const id = e.target.id;
     const value = e.target.value;
     setState({ ...state, [id]: value });
-    console.log(state);
   };
 
   const postOrders = () => {
     api
       .post("/v2/orders", {
-        symbol: state.symbol,
+        symbol: state.symbol.toUpperCase(),
         qty: state.qty,
         side: state.side,
         type: state.type,
@@ -44,7 +43,8 @@ const BasicTrade = () => {
         console.log(res);
       })
       .catch(function (error) {
-        console.log(error);
+        //Create modal for error3
+        /*errorModal(error);*/
       });
   };
 
@@ -59,10 +59,11 @@ const BasicTrade = () => {
             <Col>
               <Form.Control
                 type="text"
-                value={state.symbol}
+                value={state.symbol.toUpperCase()}
                 onChange={changeHandler}
                 id={"symbol"}
                 size="sm"
+                maxLength="4"
               />
             </Col>
           </Form.Group>
@@ -72,7 +73,7 @@ const BasicTrade = () => {
             </Form.Label>
             <Col>
               <Form.Control
-                type="text"
+                type="number"
                 value={state.qty}
                 onChange={changeHandler}
                 id={"qty"}
@@ -86,7 +87,7 @@ const BasicTrade = () => {
             </Form.Label>
             <Col>
               <Form.Control
-                type="text"
+                type="number"
                 value={state.price}
                 className={"price"}
                 onChange={changeHandler}

@@ -1,12 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import api from "../api/alpaca/config";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "../styles/index.css";
+import Positions from "./positions";
+import getPositions from "../api/alpaca/get/getPositions";
 
 const BasicAccount = () => {
   const [accountInfo, setAccountInfo] = useState([]);
 
+  useEffect(() => {
+    getAccount();
+  }, []);
+
   const getAccount = () => {
+    getPositions();
     api
       .get("/v2/account")
       .then((res) => {
@@ -34,7 +41,7 @@ const BasicAccount = () => {
           <Col>Buying Power: {buying_power}</Col>
         </Row>
         <Row>
-          <Col>Positions component</Col>
+          <Positions />
         </Row>
       </Container>
     </>
