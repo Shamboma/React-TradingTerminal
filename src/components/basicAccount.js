@@ -1,6 +1,7 @@
 import { useState } from "react";
 import api from "../api/alpaca/config";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import "../styles/index.css";
 
 const BasicAccount = () => {
   const [accountInfo, setAccountInfo] = useState([]);
@@ -19,11 +20,11 @@ const BasicAccount = () => {
   const { account_number, cash, buying_power } = accountInfo;
   return (
     <>
-      <Container>
+      <Container className={"BasicAccount"}>
         <Row>
           <Col>Account: {account_number}</Col>
           <Col>
-            <Button variant={"light"} onClick={getAccount}>
+            <Button className={"Button"} variant={"dark"} onClick={getAccount}>
               Load
             </Button>
           </Col>

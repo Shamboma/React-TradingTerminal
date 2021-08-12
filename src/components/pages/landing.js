@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+import LoginButton from "../modals/loginButton";
 
 const Landing = () => {
   return (
     <>
       <h1>Trading terminal</h1>
-      <Link to="/dashboard">Login</Link>
+      <LoginButton text={"Login"} />
     </>
   );
 };

@@ -10,7 +10,7 @@ const FullWatchlist = () => {
   return (
     <>
       <Container>
-        <Table bordered hover>
+        <Table bordered hover className={"Table"}>
           <thead>
             <tr>
               <th>Symbol</th>
@@ -25,6 +25,18 @@ const FullWatchlist = () => {
             <tr>
               <th>{watchlist[0][1]}</th>
               <th>{watchlist[1][1]}</th>
+            </tr>
+            <tr>
+              <th>{watchlist[0][2]}</th>
+              <th>{watchlist[1][2]}</th>
+            </tr>
+            <tr>
+              <th>{watchlist[0][2]}</th>
+              <th>{watchlist[1][2]}</th>
+            </tr>
+            <tr>
+              <th>{watchlist[0][2]}</th>
+              <th>{watchlist[1][2]}</th>
             </tr>
             <tr>
               <th>{watchlist[0][2]}</th>

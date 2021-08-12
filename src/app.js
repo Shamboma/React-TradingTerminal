@@ -13,7 +13,7 @@ function App() {
             <Landing />
           </Route>
           <Route path={"/dashboard"}>
-            <Dashboard />
+            <Dashboard userName={"Guest"} />
           </Route>
         </Switch>
       </div>

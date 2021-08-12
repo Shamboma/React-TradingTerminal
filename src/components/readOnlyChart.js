@@ -6,8 +6,16 @@ function ReadOnlyChart() {
   const ref = React.useRef();
 
   useEffect(() => {
-    const chart = createChart(ref.current, { width: 600, height: 300 });
+    const chart = createChart(ref.current, { width: 730, height: 550 });
     const lineSeries = chart.addLineSeries();
+    chart.applyOptions({
+      layout: {
+        backgroundColor: "#000000",
+        textColor: "#696969",
+        fontSize: 12,
+        fontFamily: "Calibri",
+      },
+    });
     lineSeries.setData([
       { time: "2019-04-11", value: 80.01 },
       { time: "2019-04-12", value: 96.63 },

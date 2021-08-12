@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 
-const LogoutButton = (props) => {
+const LoginButton = (props) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -16,17 +16,18 @@ const LogoutButton = (props) => {
 
       <Modal show={show} onHide={handleClose} backdrop="static">
         <Modal.Header>
-          <Modal.Title>Time to Go!</Modal.Title>
+          <Modal.Title>Login</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Are you sure you want to logout?</Modal.Body>
+        <Modal.Body>Pick Your Exchange</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Link to="/">Logout</Link>
+          <Link to="/dashboard">Test</Link>
+          <Link to="/">QuesTrade</Link>
         </Modal.Footer>
       </Modal>
     </>
   );
 };
-export default LogoutButton;
+export default LoginButton;

@@ -1,0 +1,20 @@
+.Stocks {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.NavBar {
+  background-color: #000000;
+}
+.NavBar .Tabs {
+  color: #ffffff;
+  border-color: #000000;
+  background-color: purple;
+}
+
+.Button {
+  color: #ffffff;
+  background-color: #800080FF;
+}
+
+/*# sourceMappingURL=index.css.map */

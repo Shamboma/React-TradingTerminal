@@ -8,25 +8,26 @@ import ReadOnlyChart from "../readOnlyChart";
 const Stocks = () => {
   return (
     <>
-      <Container fluid>
+      <Container fluid className={"Stocks"}>
         <Row>
-          <Col>
+          <Col md={5}>
             <DataLevelOne />
           </Col>
-          <Col>
+          <Col md={2}>
+            <BasicTrade />
+            {/*<img src={require("../assets/hand.jpg")} />*/}
+          </Col>
+          <Col md={5}>
             <ReadOnlyChart />
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col md={5}>
             <BasicAccount />
           </Col>
-          <Col>
-            <BasicTrade />
+          <Col md={7}>
+            <FullWatchlist />
           </Col>
-        </Row>
-        <Row>
-          <FullWatchlist />
         </Row>
       </Container>
     </>

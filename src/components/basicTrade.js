@@ -52,8 +52,8 @@ const BasicTrade = () => {
     <>
       <Container>
         <Form>
-          <Form.Group className={"mb-3"} as={Row}>
-            <Form.Label column sm="2">
+          <Form.Group className={"mb-2"} as={Row}>
+            <Form.Label column sm="3">
               Ticker
             </Form.Label>
             <Col>
@@ -66,8 +66,8 @@ const BasicTrade = () => {
               />
             </Col>
           </Form.Group>
-          <Form.Group className={"mb-3"} as={Row}>
-            <Form.Label column sm="2">
+          <Form.Group className={"mb-2"} as={Row}>
+            <Form.Label column sm="3">
               Quantity
             </Form.Label>
             <Col>
@@ -80,8 +80,8 @@ const BasicTrade = () => {
               />
             </Col>
           </Form.Group>
-          <Form.Group className={"mb-3"} as={Row}>
-            <Form.Label column sm="2">
+          <Form.Group className={"mb-2"} as={Row}>
+            <Form.Label column sm="3">
               Price
             </Form.Label>
             <Col>
@@ -95,8 +95,8 @@ const BasicTrade = () => {
               />
             </Col>
           </Form.Group>
-          <Form.Group className={"mb-3"} as={Row}>
-            <Form.Label column sm="2">
+          <Form.Group className={"mb-2"} as={Row}>
+            <Form.Label column sm="3">
               Type
             </Form.Label>
             <Col>
@@ -112,8 +112,8 @@ const BasicTrade = () => {
               </Form.Control>
             </Col>
           </Form.Group>
-          <Form.Group className={"mb-3"} as={Row}>
-            <Form.Label column sm="2">
+          <Form.Group className={"mb-2"} as={Row}>
+            <Form.Label column sm="3">
               Duration
             </Form.Label>
             <Col>
@@ -129,10 +129,20 @@ const BasicTrade = () => {
               </Form.Control>
             </Col>
           </Form.Group>
-          <Button variant={"light"} type={"submit"} onClick={buyHandler}>
+          <Button
+            className={"Button"}
+            variant={"dark"}
+            type={"submit"}
+            onClick={buyHandler}
+          >
             Buy
           </Button>
-          <Button variant={"light"} type={"submit"} onClick={sellHandler}>
+          <Button
+            className={"Button"}
+            variant={"dark"}
+            type={"submit"}
+            onClick={sellHandler}
+          >
             Sell
           </Button>
         </Form>

@@ -22,7 +22,7 @@ const DataLevelOne = () => {
 
   return (
     <>
-      <Container>
+      <Container fluid>
         <Row>
           <Col>{ticker}</Col>
           <Col>{price}</Col>
@@ -58,6 +58,31 @@ const DataLevelOne = () => {
                 <th>{dataOne[0][1]}</th>
                 <th>{dataOne[1][1]}</th>
                 <th>{dataOne[2][1]}</th>
+              </tr>
+              <tr>
+                <th>{dataOne[0][2]}</th>
+                <th>{dataOne[1][2]}</th>
+                <th>{dataOne[2][2]}</th>
+              </tr>
+              <tr>
+                <th>{dataOne[0][2]}</th>
+                <th>{dataOne[1][2]}</th>
+                <th>{dataOne[2][2]}</th>
+              </tr>
+              <tr>
+                <th>{dataOne[0][2]}</th>
+                <th>{dataOne[1][2]}</th>
+                <th>{dataOne[2][2]}</th>
+              </tr>
+              <tr>
+                <th>{dataOne[0][2]}</th>
+                <th>{dataOne[1][2]}</th>
+                <th>{dataOne[2][2]}</th>
+              </tr>
+              <tr>
+                <th>{dataOne[0][2]}</th>
+                <th>{dataOne[1][2]}</th>
+                <th>{dataOne[2][2]}</th>
               </tr>
               <tr>
                 <th>{dataOne[0][2]}</th>
