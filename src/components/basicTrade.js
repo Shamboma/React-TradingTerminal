@@ -31,14 +31,18 @@ const BasicTrade = () => {
 
   const postOrders = () => {
     api
-      .post("/v2/orders", {
-        symbol: state.symbol.toUpperCase(),
-        qty: state.qty,
-        side: state.side,
-        type: state.type,
-        time_in_force: state.time_in_force,
-        limit_price: state.price,
-      })
+      .post(
+        "/v2/orders",
+        {
+          symbol: state.symbol.toUpperCase(),
+          qty: state.qty,
+          side: state.side,
+          type: state.type,
+          time_in_force: state.time_in_force,
+          limit_price: state.price,
+        },
+        { timeout: 2 }
+      )
       .then(function (res) {
         console.log(res);
       })
