@@ -1,0 +1,56 @@
+//Dark Mode
+$white: #ffffff;
+$black: #000000;
+$purple: #800080FF;
+
+body, html{
+ background-color: $black;
+}
+
+a {
+ color: $white;
+ text-decoration: none;
+}
+
+//Webkit
+::-webkit-scrollbar {
+ background-color: #202324;
+ color: #aba499;
+}
+
+::-webkit-scrollbar-corner {
+ background-color: #181a1b;
+}
+
+::-webkit-scrollbar-thumb {
+ background-color: #454a4d;
+}
+
+//Pages
+.Landing {
+ color: $white;
+ text-align: center;
+}
+.Dashboard {}
+.Home {}
+.Stocks {
+ color: $white;
+}
+.Options {}
+
+//Components
+
+//Misc
+.Button {
+ color: $white;
+ background-color: $purple;
+}
+.table {
+ color: $white;
+ border-color: rgb(56,61,63);
+}
+.form-control {
+ background-color: $black !important;
+ color: $white;
+ border-color: rgb(60, 65, 68);
+}

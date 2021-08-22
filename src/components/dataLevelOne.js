@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Col, Container, Row, Table } from "react-bootstrap";
+import { Col, Row, Table } from "react-bootstrap";
 
 const DataLevelOne = () => {
   const [ticker, setTicker] = useState("TEST TICKER");
@@ -22,77 +22,75 @@ const DataLevelOne = () => {
 
   return (
     <>
-      <Container fluid>
-        <Row>
-          <Col>{ticker}</Col>
-          <Col>{price}</Col>
-        </Row>
-        <Row>
-          <Col>High {high}</Col>
-          <Col>Low {low}</Col>
-        </Row>
-        <Row>
-          <Col>Open {open}</Col>
-          <Col>Prev. Close {prevClose}</Col>
-        </Row>
-        <Row>
-          <Col>Volume {volume}</Col>
-          <Col>Avg. Volume {avgVolume}</Col>
-        </Row>
-        <Row>
-          <Table bordered hover>
-            <thead>
-              <tr>
-                <th>Time</th>
-                <th>Price</th>
-                <th>Size</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>{dataOne[0][0]}</td>
-                <td>{dataOne[1][0]}</td>
-                <td>{dataOne[2][0]}</td>
-              </tr>
-              <tr>
-                <td>{dataOne[0][1]}</td>
-                <td>{dataOne[1][1]}</td>
-                <td>{dataOne[2][1]}</td>
-              </tr>
-              <tr>
-                <td>{dataOne[0][2]}</td>
-                <td>{dataOne[1][2]}</td>
-                <td>{dataOne[2][2]}</td>
-              </tr>
-              <tr>
-                <td>{dataOne[0][2]}</td>
-                <td>{dataOne[1][2]}</td>
-                <td>{dataOne[2][2]}</td>
-              </tr>
-              <tr>
-                <td>{dataOne[0][2]}</td>
-                <td>{dataOne[1][2]}</td>
-                <td>{dataOne[2][2]}</td>
-              </tr>
-              <tr>
-                <td>{dataOne[0][2]}</td>
-                <td>{dataOne[1][2]}</td>
-                <td>{dataOne[2][2]}</td>
-              </tr>
-              <tr>
-                <td>{dataOne[0][2]}</td>
-                <td>{dataOne[1][2]}</td>
-                <td>{dataOne[2][2]}</td>
-              </tr>
-              <tr>
-                <td>{dataOne[0][2]}</td>
-                <td>{dataOne[1][2]}</td>
-                <td>{dataOne[2][2]}</td>
-              </tr>
-            </tbody>
-          </Table>
-        </Row>
-      </Container>
+      <Row>
+        <Col>{ticker}</Col>
+        <Col>{price}</Col>
+      </Row>
+      <Row>
+        <Col>High {high}</Col>
+        <Col>Low {low}</Col>
+      </Row>
+      <Row>
+        <Col>Open {open}</Col>
+        <Col>Prev. Close {prevClose}</Col>
+      </Row>
+      <Row>
+        <Col>Volume {volume}</Col>
+        <Col>Avg. Volume {avgVolume}</Col>
+      </Row>
+      <Row>
+        <Table bordered hover>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Price</th>
+              <th>Size</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{dataOne[0][0]}</td>
+              <td>{dataOne[1][0]}</td>
+              <td>{dataOne[2][0]}</td>
+            </tr>
+            <tr>
+              <td>{dataOne[0][1]}</td>
+              <td>{dataOne[1][1]}</td>
+              <td>{dataOne[2][1]}</td>
+            </tr>
+            <tr>
+              <td>{dataOne[0][2]}</td>
+              <td>{dataOne[1][2]}</td>
+              <td>{dataOne[2][2]}</td>
+            </tr>
+            <tr>
+              <td>{dataOne[0][2]}</td>
+              <td>{dataOne[1][2]}</td>
+              <td>{dataOne[2][2]}</td>
+            </tr>
+            <tr>
+              <td>{dataOne[0][2]}</td>
+              <td>{dataOne[1][2]}</td>
+              <td>{dataOne[2][2]}</td>
+            </tr>
+            <tr>
+              <td>{dataOne[0][2]}</td>
+              <td>{dataOne[1][2]}</td>
+              <td>{dataOne[2][2]}</td>
+            </tr>
+            <tr>
+              <td>{dataOne[0][2]}</td>
+              <td>{dataOne[1][2]}</td>
+              <td>{dataOne[2][2]}</td>
+            </tr>
+            <tr>
+              <td>{dataOne[0][2]}</td>
+              <td>{dataOne[1][2]}</td>
+              <td>{dataOne[2][2]}</td>
+            </tr>
+          </tbody>
+        </Table>
+      </Row>
     </>
   );
 };

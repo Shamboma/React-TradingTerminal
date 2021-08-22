@@ -4,11 +4,13 @@ import { Col, Container, Row } from "react-bootstrap";
 import DataLevelOne from "../dataLevelOne";
 import FullWatchlist from "../fullWatchlist";
 import ReadOnlyChart from "../readOnlyChart";
+import NavBar from "../navbar";
 
 const Stocks = () => {
   return (
     <>
       <Container fluid className={"Stocks"}>
+        <NavBar userName="Guest" />
         <Row>
           <Col md={5}>
             <DataLevelOne />

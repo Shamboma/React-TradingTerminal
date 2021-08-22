@@ -23,7 +23,9 @@ const LogoutButton = (props) => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Link to="/">Logout</Link>
+          <Button className={"Button"} variant="dark">
+            <Link to="/">Logout</Link>
+          </Button>
         </Modal.Footer>
       </Modal>
     </>

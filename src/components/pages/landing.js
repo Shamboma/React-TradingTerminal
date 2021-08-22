@@ -4,16 +4,16 @@ import { Col, Container, Row } from "react-bootstrap";
 const Landing = () => {
   return (
     <>
-      <body>
-        <Container className={"Landing"}>
-          <Row>
-            <Col>Enter Terminal</Col>
-            <Col>
-              <LoginButton text={"Login"} />
-            </Col>
-          </Row>
-        </Container>
-      </body>
+      <Container fluid className={"Landing"}>
+        <Row>
+          <Col>Enter Terminal</Col>
+        </Row>
+        <Row>
+          <Col>
+            <LoginButton text={"Login"} />
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };

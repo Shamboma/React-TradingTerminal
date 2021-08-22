@@ -1,0 +1,48 @@
+body, html {
+  background-color: #000000;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  background-color: #202324;
+  color: #aba499;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #181a1b;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #454a4d;
+}
+
+.Landing {
+  color: #ffffff;
+  text-align: center;
+}
+
+.Stocks {
+  color: #ffffff;
+}
+
+.Button {
+  color: #ffffff;
+  background-color: #800080FF;
+}
+
+.table {
+  color: #ffffff;
+  border-color: #383d3f;
+}
+
+.form-control {
+  background-color: #000000 !important;
+  color: #ffffff;
+  border-color: #3c4144;
+}
+
+/*# sourceMappingURL=app.css.map */
