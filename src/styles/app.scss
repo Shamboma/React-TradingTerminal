@@ -3,7 +3,10 @@ $white: #ffffff;
 $black: #000000;
 $purple: #800080FF;
 
-body, html{
+html, body, #root {
+ margin:0;
+ padding:0;
+ height:100%;
  background-color: $black;
 }
 
@@ -53,4 +56,9 @@ a {
  background-color: $black !important;
  color: $white;
  border-color: rgb(60, 65, 68);
+}
+
+.Chart {
+ height: 100%;
+ width: 100%;
 }

@@ -1,10 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/app.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Landing from "./components/pages/landing";
-import Stocks from "./components/pages/stocks";
-import Home from "./components/pages/home";
-import Options from "./components/pages/options";
+import Landing from "./pages/landing";
+import Stocks from "./pages/stocks";
+import Home from "./pages/home";
+import Options from "./pages/options";
 
 function App() {
   return (

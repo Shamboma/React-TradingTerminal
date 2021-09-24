@@ -1,16 +1,15 @@
 import React, { useEffect } from "react";
 import { createChart } from "lightweight-charts";
-import { Col } from "react-bootstrap";
 
 function ReadOnlyChart() {
   const ref = React.useRef();
 
   useEffect(() => {
-    const chart = createChart(ref.current, { width: 730, height: 550 });
+    const chart = createChart(ref.current);
     const candlestickSeries = chart.addCandlestickSeries();
     chart.applyOptions({
       layout: {
-        backgroundColor: "#000000",
+        backgroundColor: "rgba(255,255,255,0)",
         textColor: "#696969",
         fontSize: 12,
         fontFamily: "Calibre",
@@ -119,11 +118,7 @@ function ReadOnlyChart() {
     ]);
   }, []);
 
-  return (
-    <>
-      <Col ref={ref} />
-    </>
-  );
+  return <div className={"Chart"} ref={ref} />;
 }
 
 export default ReadOnlyChart;

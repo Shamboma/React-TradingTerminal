@@ -22,32 +22,30 @@ const Positions = () => {
   //How I did it for accountInfo
   /*const { id, symbol, current_price, cost_basis, qty, unrealized_pl, side} = positions;*/
   return (
-    <>
-      <Table bordered hover className={"Table"}>
-        <thead>
-          <tr>
-            <th>Ticker</th>
-            <th>Basis</th>
-            <th>Current</th>
-            <th>Quantity</th>
-            <th>Unrealized P&L</th>
-            <th>Side</th>
+    <Table bordered hover className={"Table"}>
+      <thead>
+        <tr>
+          <th>Ticker</th>
+          <th>Basis</th>
+          <th>Current</th>
+          <th>Quantity</th>
+          <th>Unrealized P&L</th>
+          <th>Side</th>
+        </tr>
+      </thead>
+      <tbody>
+        {positions.map((position) => (
+          <tr key={position.symbol}>
+            <td>{position.symbol}</td>
+            <td>{position.avg_entry_price}</td>
+            <td>{position.current_price}</td>
+            <td>{position.qty}</td>
+            <td>{position.unrealized_pl}</td>
+            <td>{position.side}</td>
           </tr>
-        </thead>
-        <tbody>
-          {positions.map((position) => (
-            <tr key={position.symbol}>
-              <td>{position.symbol}</td>
-              <td>{position.avg_entry_price}</td>
-              <td>{position.current_price}</td>
-              <td>{position.qty}</td>
-              <td>{position.unrealized_pl}</td>
-              <td>{position.side}</td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
-    </>
+        ))}
+      </tbody>
+    </Table>
   );
 };
 

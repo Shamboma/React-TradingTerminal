@@ -23,8 +23,11 @@ const LoginButton = (props) => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Link to="/stocks">Test</Link>
-          <Link to="/">QuesTrade</Link>
+          <Link to="/stocks">
+            <Button className={"Button"} variant="dark">
+              Test
+            </Button>
+          </Link>
         </Modal.Footer>
       </Modal>
     </>

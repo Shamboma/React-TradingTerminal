@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../api/alpaca/config";
 import { Button, Col, Row } from "react-bootstrap";
-import "../styles/app.css";
 import Positions from "./positions";
 import getPositions from "../api/alpaca/get/getPositions";
 
@@ -26,9 +25,11 @@ const BasicAccount = () => {
   };
   const { account_number, cash, buying_power } = accountInfo;
   return (
-    <>
+    <article className={"BasicAccount"}>
       <Row>
-        <Col>Account: {account_number}</Col>
+        <Col>
+          <h3>Account: {account_number}</h3>
+        </Col>
         <Col>
           <Button className={"Button"} variant={"dark"} onClick={getAccount}>
             Load
@@ -36,13 +37,17 @@ const BasicAccount = () => {
         </Col>
       </Row>
       <Row>
-        <Col>Cash: {cash}</Col>
-        <Col>Buying Power: {buying_power}</Col>
+        <Col>
+          <h4>Cash: {cash}</h4>
+        </Col>
+        <Col>
+          <h4>Buying Power: {buying_power}</h4>
+        </Col>
       </Row>
       <Row>
         <Positions />
       </Row>
-    </>
+    </article>
   );
 };
 
