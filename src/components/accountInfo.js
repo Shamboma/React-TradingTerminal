@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import api from "../api/alpaca/config";
 import { Button, Col, Row } from "react-bootstrap";
 import Positions from "./positions";
-import getPositions from "../api/alpaca/get/getPositions";
 
 const AccountInfo = () => {
   const [accountInfo, setAccountInfo] = useState([]);
@@ -12,7 +11,6 @@ const AccountInfo = () => {
   }, []);
 
   const getAccount = () => {
-    getPositions();
     api
       .get("/v2/account")
       .then((res) => {
