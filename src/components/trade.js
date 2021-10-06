@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import api from "../api/alpaca/config";
 
-const BasicTrade = () => {
+const Trade = () => {
   const [state, setState] = useState({
     symbol: "coin",
     side: "buy",
@@ -152,4 +152,4 @@ const BasicTrade = () => {
   );
 };
 
-export default BasicTrade;
+export default Trade;

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { createChart } from "lightweight-charts";
 
-function ReadOnlyChart() {
+function Chart() {
   const ref = React.useRef();
 
   useEffect(() => {
@@ -121,4 +121,4 @@ function ReadOnlyChart() {
   return <div className={"Chart"} ref={ref} />;
 }
 
-export default ReadOnlyChart;
+export default Chart;

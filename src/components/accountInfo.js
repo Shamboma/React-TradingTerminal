@@ -4,7 +4,7 @@ import { Button, Col, Row } from "react-bootstrap";
 import Positions from "./positions";
 import getPositions from "../api/alpaca/get/getPositions";
 
-const BasicAccount = () => {
+const AccountInfo = () => {
   const [accountInfo, setAccountInfo] = useState([]);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const BasicAccount = () => {
   };
   const { account_number, cash, buying_power } = accountInfo;
   return (
-    <article className={"BasicAccount"}>
+    <article className={"AccountInfo"}>
       <Row>
         <Col>
           <h3>Account: {account_number}</h3>
@@ -51,4 +51,4 @@ const BasicAccount = () => {
   );
 };
 
-export default BasicAccount;
+export default AccountInfo;

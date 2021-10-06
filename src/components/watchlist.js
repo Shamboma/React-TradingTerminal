@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Table } from "react-bootstrap";
 
-const FullWatchlist = () => {
+const Watchlist = () => {
   const [watchlist, setWatchlist] = useState([
     ["Coin", "V", "GME"],
     [1, 2, 3],
@@ -45,4 +45,4 @@ const FullWatchlist = () => {
   );
 };
 
-export default FullWatchlist;
+export default Watchlist;

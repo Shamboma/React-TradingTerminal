@@ -1,9 +1,9 @@
-import BasicAccount from "../components/basicAccount";
-import BasicTrade from "../components/basicTrade";
+import AccountInfo from "../components/accountInfo";
+import Trade from "../components/trade";
 import { Col, Container, Row } from "react-bootstrap";
 import DataLevelOne from "../components/dataLevelOne";
-import FullWatchlist from "../components/fullWatchlist";
-import ReadOnlyChart from "../components/readOnlyChart";
+import Watchlist from "../components/watchlist";
+import Chart from "../components/chart";
 import NavBar from "../components/navbar";
 
 const Stocks = () => {
@@ -17,19 +17,19 @@ const Stocks = () => {
           <DataLevelOne />
         </Col>
         <Col md={2}>
-          <BasicTrade />
+          <Trade />
           {/*<img src={require("../assets/hand.jpg")} />*/}
         </Col>
         <Col md={5}>
-          <ReadOnlyChart />
+          <Chart />
         </Col>
       </Row>
       <Row>
         <Col md={5}>
-          <BasicAccount />
+          <AccountInfo />
         </Col>
         <Col md={7}>
-          <FullWatchlist />
+          <Watchlist />
         </Col>
       </Row>
     </Container>
