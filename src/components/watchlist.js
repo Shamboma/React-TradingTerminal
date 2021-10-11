@@ -1,80 +1,47 @@
-import { useEffect, useMemo, useRef, useState } from "react";
-import { Button, Table } from "react-bootstrap";
-import useWebSocket, { ReadyState } from "react-use-websocket";
-import api from "../api/alpaca/config";
+import { useEffect, useState } from "react";
+import { Button, Form, Table } from "react-bootstrap";
+import useWebSocket from "react-use-websocket";
 
 const Watchlist = () => {
-  const [watchlists, setWatchlists] = useState([]);
   const [watchlist, setWatchlist] = useState([]);
 
-  const getWatchlists = () => {
-    api
-      .get("/v2/watchlists")
-      .then((res) => {
-        setWatchlists(res.data);
-        console.log(watchlists);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
-  const viewWatchlist = () => {
-    api
-      .get("/v2/watchlists/af4110d2-5aac-485d-9b60-fcccaaf9adb4")
-      .then((res) => {
-        setWatchlist(res.data.assets);
-        console.log(watchlist);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
-  //I think this is deleting because axios is not differentiating path vs body variables
-  const addToWatchlist = () => {
-    api
-      .put("/v2/watchlists/af4110d2-5aac-485d-9b60-fcccaaf9adb4", {
-        symbol: "COIN",
-      })
-      .then(function (res) {
-        console.log(res);
-      })
-      .catch(function (error) {});
-  };
+  useEffect(() => {
+    sendJsonMessage({
+      action: "auth",
+      key: "PKJLAMZFMSIH693R1IFT",
+      secret: "FbJVcKZXzVpcd1i1MpNC2cmNFey6OGyRxwwaZpoS",
+    });
+  }, []);
 
   //Websocket
   const [socketUrl, setSocketUrl] = useState(
     "wss://stream.data.alpaca.markets/v2/iex"
   );
   const { sendJsonMessage, lastMessage, readyState } = useWebSocket(socketUrl);
-  const messageHistory = useRef([]);
-
-  const connectionStatus = {
-    [ReadyState.CONNECTING]: "Connecting",
-    [ReadyState.OPEN]: "Open",
-    [ReadyState.CLOSING]: "Closing",
-    [ReadyState.CLOSED]: "Closed",
-    [ReadyState.UNINSTANTIATED]: "Uninstantiated",
-  }[readyState];
-  messageHistory.current = useMemo(
-    () => messageHistory.current.concat(lastMessage),
-    [lastMessage]
-  );
-  useEffect(
-    () =>
-      sendJsonMessage({
-        action: "auth",
-        key: "PKJLAMZFMSIH693R1IFT",
-        secret: "FbJVcKZXzVpcd1i1MpNC2cmNFey6OGyRxwwaZpoS",
-      }),
-    []
-  );
-  const handleClickAddTicker = () =>
+  const addTicker = (ticker) =>
     sendJsonMessage({
       action: "subscribe",
-      dailyBars: ["SPY", "AMD"],
+      dailyBars: [ticker.toUpperCase()],
     });
+
+  //Pushing websocket data to watchlist and will map watchlist to table
+  useEffect(() => {
+    if (lastMessage == null) {
+      //do nothing
+    } else setWatchlist([...watchlist, lastMessage.data]);
+    console.log(watchlist);
+  }, [lastMessage, watchlist]);
+
+  //Adding ticker to watchlist
+  const [watchlistTicker, setWatchlistTicker] = useState("");
+  const changeHandler = (e) => {
+    const value = e.target.value;
+    setWatchlistTicker(value);
+  };
+  const submitHandler = (e) => {
+    e.preventDefault();
+    addTicker(watchlistTicker);
+  };
 
   return (
     <>
@@ -92,24 +59,64 @@ const Watchlist = () => {
           </tr>
         </tbody>
       </Table>
-      <Button
-        onClick={handleClickAddTicker}
-        className={"Button"}
-        variant={"dark"}
-      >
-        Add Ticker to websocket
-      </Button>
-      <Button onClick={viewWatchlist} className={"Button"} variant={"dark"}>
-        Get Watchlist
-      </Button>
-      <Button onClick={addToWatchlist} className={"Button"} variant={"dark"}>
-        Add to watchlist
-      </Button>
 
-      <span>{connectionStatus}</span>
+      <Form>
+        <Form.Group>
+          <Form.Control
+            value={watchlistTicker.toUpperCase()}
+            onChange={changeHandler}
+            id={"symbol"}
+            placeholder={"Symbol"}
+          />
+        </Form.Group>
+        <Button
+          onClick={submitHandler}
+          type={"submit"}
+          className={"Button"}
+          variant={"dark"}
+        >
+          Add to watchlist
+        </Button>
+      </Form>
       {lastMessage ? <span>Last message: {lastMessage.data}</span> : null}
     </>
   );
 };
 
 export default Watchlist;
+
+//For future when I add watchlists from the exchange.
+// const getWatchlists = () => {
+//   api
+//     .get("/v2/watchlists")
+//     .then((res) => {
+//       setWatchlists(res.data);
+//       console.log(watchlists);
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// };
+// //Viewing main watchlist of test account
+// const viewWatchlist = () => {
+//   api
+//     .get("/v2/watchlists/af4110d2-5aac-485d-9b60-fcccaaf9adb4")
+//     .then((res) => {
+//       setWatchlist(res.data.assets);
+//       console.log(watchlist);
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// };
+// //I think this is deleting because axios is not differentiating path vs body variables
+// const addToWatchlist = () => {
+//   api
+//     .put("/v2/watchlists/af4110d2-5aac-485d-9b60-fcccaaf9adb4", {
+//       symbol: "COIN",
+//     })
+//     .then(function (res) {
+//       console.log(res);
+//     })
+//     .catch(function (error) {});
+// };
