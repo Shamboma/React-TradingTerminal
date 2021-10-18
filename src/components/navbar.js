@@ -2,8 +2,11 @@ import { Button, Navbar } from "react-bootstrap";
 import LogoutButton from "./modals/logoutButton";
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
-const NavBar = (props) => {
+const NavBar = () => {
+  const { user } = useAuth0();
+
   return (
     <Navbar variant={"dark"} className={"NavBar"}>
       <Navbar.Brand>Trading Terminal</Navbar.Brand>
@@ -23,7 +26,7 @@ const NavBar = (props) => {
           Options
         </Button>
       </Link>
-      <Navbar.Text>Hello {props.userName} </Navbar.Text>
+      <Navbar.Text>Hello {user.name} </Navbar.Text>
       <LogoutButton text={"Logout"} />
     </Navbar>
   );

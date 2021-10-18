@@ -14,10 +14,8 @@ const Watchlist = () => {
   }, []);
 
   //Websocket
-  const [socketUrl, setSocketUrl] = useState(
-    "wss://stream.data.alpaca.markets/v2/iex"
-  );
-  const { sendJsonMessage, lastMessage, readyState } = useWebSocket(socketUrl);
+  const [socketUrl] = useState("wss://stream.data.alpaca.markets/v2/iex");
+  const { sendJsonMessage, lastMessage } = useWebSocket(socketUrl);
   const addTicker = (ticker) =>
     sendJsonMessage({
       action: "subscribe",
@@ -30,7 +28,7 @@ const Watchlist = () => {
       //do nothing
     } else setWatchlist([...watchlist, lastMessage.data]);
     console.log(watchlist);
-  }, [lastMessage, watchlist]);
+  }, [lastMessage]);
 
   //Adding ticker to watchlist
   const [watchlistTicker, setWatchlistTicker] = useState("");

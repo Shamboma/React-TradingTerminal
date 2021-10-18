@@ -1,4 +1,4 @@
-import LoginButton from "../components/modals/loginButton";
+import LoginButton from "../components/loginButton";
 import { Col, Container, Row } from "react-bootstrap";
 
 const Landing = () => {
